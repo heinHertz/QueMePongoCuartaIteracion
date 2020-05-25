@@ -10,7 +10,6 @@ public class Borrador {
 	
 	 TipoPrenda tipoPrenda;
 
-	 //   Categoria categoria;
 
 	    Material material;
 
@@ -68,17 +67,6 @@ public class Borrador {
 
 	public void validarMaterialConsistenteConTipoDePrenda(Material material) {
 		
-//		if( !(this.tipoPrenda.categoria.equals(Categoria.SUPERIOR) && material.equals(Material.POLIESTER))
-//				
-//			|| !(this.tipoPrenda.categoria.equals(Categoria.CALZADO) && material.equals(Material.CUERO))
-//				
-//			|| !(this.tipoPrenda.categoria.equals(Categoria.INFERIOR) && material.equals(Material.LANA))
-//					
-//			|| !(this.tipoPrenda.categoria.equals(Categoria.ACCESORIOS) && material.equals(Material.PLASTICO))
-//
-//		) throw new MaterialException("Debe elegir el material correcto ");
-//		
-		
 		
 		switch(this.tipoPrenda.categoria) {
 		  case SUPERIOR:
@@ -99,7 +87,6 @@ public class Borrador {
 			  
 			  if( !( material.equals(Material.METAL) || material.equals(Material.PLASTICO)) ) {  excepcion(); };
 			  
-			  
 			  break;
 			 
 		  default:   throw new MaterialException("Debe elegir el material correcto "); 
@@ -109,7 +96,7 @@ public class Borrador {
 	}
 	
 	public void excepcion() {
-		
+		 throw new MaterialException("Debe elegir el material correcto "); 
 	}
 
 	

@@ -2,6 +2,7 @@ package negocio;
 
 import java.time.Instant;
 import java.util.List;
+import java.util.Map;
 
 import clima.*;
 import excepciones.ExcepcionServicioClima;
@@ -10,6 +11,8 @@ import proveedorclima.ProveedorClima;
 public class ServicioClima implements InterfazServicioClima{
 
 	  List<Clima> climas;
+	  
+	  List<Map<String, Object>> climasWeather;
 	 
 	  ProveedorClima proveedorClima;
 	
@@ -27,7 +30,7 @@ public class ServicioClima implements InterfazServicioClima{
 	        if (climaFecha == null) {
 	            try {
 	            	
-	                this.climas = this.proveedorClima.getWeather();
+	                this.climasWeather = this.proveedorClima.getWeather("Buenos Aires, Argentina");
 	            }
 	            
 	            catch (Exception ex) {

@@ -38,29 +38,8 @@ public class Atuendo {
       }
     
     
-//    public boolean tieneCategoriaValida(Prenda prendaNueva ){
-//
-//        return !prendas.stream().anyMatch( p -> p.getCategoriaDePrenda().equals(prendaNueva.getTipoPrenda().getCategoria()) );
-//
-//    }
-
-//    public boolean tieneTodasLasCategorias(){
-//
-//        return ( this.cantidadCategorias() == 4 ) ;
-//    }
-
-//    public long cantidadCategorias(){
-//
-//        return  (long)prendas.stream()
-//                .filter( p-> p.getCategoriaDePrenda().equals(Categoria.INFERIOR)
-//                ||  p.getCategoriaDePrenda().equals(Categoria.SUPERIOR)
-//                ||  p.getCategoriaDePrenda().equals(Categoria.CALZADO)
-//                 ||  p.getCategoriaDePrenda().equals(Categoria.ACCESORIOS) )
-//                .count();
-//
-//    }
-//    
     
+
     
     private boolean tieneTodasLasCategorias(List<Prenda> prendas) {
     	
@@ -71,6 +50,8 @@ public class Atuendo {
             && prendasPorCategoria.containsKey(Categoria.CALZADO)
             && prendasPorCategoria.containsKey(Categoria.ACCESORIOS);
     }
+    
+    
     
     
 

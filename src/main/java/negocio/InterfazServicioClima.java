@@ -10,7 +10,6 @@ public interface InterfazServicioClima {
 	
 	 Clima getClima(Instant fecha);
 	
-	
-	
+		
 
 }

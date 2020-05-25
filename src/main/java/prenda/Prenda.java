@@ -7,7 +7,7 @@ public class Prenda {
 
     TipoPrenda tipoPrenda;
 
-  //  Categoria categoria;
+
 
     Material material;
 
@@ -55,14 +55,7 @@ public class Prenda {
     	this.colorSecundario = Objects.requireNonNull(colorSecundario, "color es obligatorio no nulo");
     }
 
-//    public boolean prendaPerteneceACategoria(Categoria categoria){
-//        if(this.getCategoria().equals(categoria))
-//            return true;
-//        else return false;
-//    }
-
    
-
 
     public Color getColorPrimario() {
         return this.colorPrimario;
@@ -83,9 +76,6 @@ public class Prenda {
         return colorSecundario;
     }
 
-//	 public boolean poseeCategoria(Categoria categoria) {
-//	        return this.tipoPrenda.poseeCategoria(categoria);
-//	    }
 
     // ESTO SIRVE SI AL COMPARAR DOS OBJETOS PRENDA , SON IGUALES SI TIENEN LAS MISMAS ATRIBUTOS CON LOS MISMOS VALORES
     @Override
