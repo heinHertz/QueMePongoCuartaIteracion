@@ -27,7 +27,7 @@ public class TipoPrenda {
     }
     
     
-    
+   
 
     public int getTemperaturaAdecuada() {
 		return temperaturaAdecuada;
