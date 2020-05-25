@@ -19,16 +19,16 @@ public class Prenda {
 
     public Prenda( TipoPrenda tipoPrenda, Material material, Color colorPrimario,Color colorSecundario, Trama trama){
 
-    	this.tipoPrenda = Objects.requireNonNull(tipoPrenda, "tipo de prenda es obligatorio");
+    	this.tipoPrenda = tipoPrenda;		 //Objects.requireNonNull(tipoPrenda, "tipo de prenda es obligatorio");
     	
-    	this.material = Objects.requireNonNull(material, "material es obligatorio");
+    	this.material = material;			//Objects.requireNonNull(material, "material es obligatorio");
     			  
-    	this.colorPrimario = Objects.requireNonNull(colorPrimario, "color es obligatorio");
+    	this.colorPrimario = colorPrimario; // Objects.requireNonNull(colorPrimario, "color es obligatorio");
     	
-    	this.colorSecundario = Objects.requireNonNull(colorSecundario, "color es obligatorio");
+    	this.colorSecundario = colorSecundario; //Objects.requireNonNull(colorSecundario, "color es obligatorio");
     	
 
-    	this.trama = Objects.requireNonNull(trama, "trama es obligatorio");
+    	this.trama = trama; // Objects.requireNonNull(trama, "trama es obligatorio");
         
 
     }
