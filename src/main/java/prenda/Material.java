@@ -6,7 +6,8 @@ public enum Material {
     LANA,   
      PLASTICO,
     POLIESTER, 
-    ALGODON; 
+    ALGODON,
+    METAL; 
 
 
 }

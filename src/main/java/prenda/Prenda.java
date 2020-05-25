@@ -74,10 +74,18 @@ public class Prenda {
 
 
 
+    public Categoria getCategoriaDePrenda() {
+		return tipoPrenda.getCategoria();
+	}
+
+
 	public Color getColorSecundario() {
         return colorSecundario;
     }
 
+//	 public boolean poseeCategoria(Categoria categoria) {
+//	        return this.tipoPrenda.poseeCategoria(categoria);
+//	    }
 
     // ESTO SIRVE SI AL COMPARAR DOS OBJETOS PRENDA , SON IGUALES SI TIENEN LAS MISMAS ATRIBUTOS CON LOS MISMOS VALORES
     @Override

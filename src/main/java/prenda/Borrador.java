@@ -82,28 +82,35 @@ public class Borrador {
 		
 		switch(this.tipoPrenda.categoria) {
 		  case SUPERIOR:
-			 System.out.println("superior"); //if( !(material.equals(Material.POLIESTER) || material.equals(Material.LANA))
+			  if( !( material.equals(Material.POLIESTER) || material.equals(Material.LANA)) ) {  excepcion(); }; 
+			  
 		    break;
 		  case INFERIOR:
-			  
-			  System.out.println("inf"); 
+			  if( !( material.equals(Material.POLIESTER) || material.equals(Material.LANA)) ) {  excepcion(); };
+			 
 		   
 		    break;
 		  case CALZADO: 
-			  System.out.println("calzaod"); 
+			  if( !( material.equals(Material.CUERO) || material.equals(Material.PLASTICO)) ) {  excepcion(); };
 			  
 			  break;
 			  
 		  case ACCESORIOS:
 			  
-			  System.out.println("accese"); 
+			  if( !( material.equals(Material.METAL) || material.equals(Material.PLASTICO)) ) {  excepcion(); };
+			  
 			  
 			  break;
-		//  default:  throw new MaterialException("Debe elegir el material correcto ");
+			 
+		  default:   throw new MaterialException("Debe elegir el material correcto "); 
+		 
 		}
 		
 	}
 	
+	public void excepcion() {
+		
+	}
 
 	
 	public void especificarColorPrimariol(Color colorPrimario) {

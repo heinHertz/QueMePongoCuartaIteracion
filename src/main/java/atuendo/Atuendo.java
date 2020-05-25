@@ -5,12 +5,23 @@ import prenda.*;
 import java.util.ArrayList;
 
 import java.util.List;
-
+import java.util.Map;
 import java.util.Objects;
+import java.util.stream.Collectors;
+
+import excepciones.*;
 
 public class Atuendo {
 
     List<Prenda> prendas = new ArrayList<Prenda>();
+    
+   
+    public Atuendo(List<Prenda> prendas) {
+    	
+        if(this.esPrendasValidas(prendas)) throw new ExcepcionAtuendo("Prendas no puede estar vacío");
+        this.prendas = prendas;
+    }
+    
 
     public void agregarPrenda( Prenda prendaNueva){
 
@@ -19,29 +30,49 @@ public class Atuendo {
     }
 
     public List<Prenda> getPrendas() {   return prendas;    }
+    
+    
+    private boolean esPrendasValidas(List<Prenda> prendas) {
+    	
+        return prendas == null || prendas.isEmpty() || !tieneTodasLasCategorias(prendas);
+      }
+    
+    
+//    public boolean tieneCategoriaValida(Prenda prendaNueva ){
+//
+//        return !prendas.stream().anyMatch( p -> p.getCategoriaDePrenda().equals(prendaNueva.getTipoPrenda().getCategoria()) );
+//
+//    }
 
-    public boolean tieneCategoriaValida(Prenda prendaNueva ){
+//    public boolean tieneTodasLasCategorias(){
+//
+//        return ( this.cantidadCategorias() == 4 ) ;
+//    }
 
-        return !prendas.stream().anyMatch( p -> p.getTipoPrenda().getCategoria().equals(prendaNueva.getTipoPrenda().getCategoria()) );
+//    public long cantidadCategorias(){
+//
+//        return  (long)prendas.stream()
+//                .filter( p-> p.getCategoriaDePrenda().equals(Categoria.INFERIOR)
+//                ||  p.getCategoriaDePrenda().equals(Categoria.SUPERIOR)
+//                ||  p.getCategoriaDePrenda().equals(Categoria.CALZADO)
+//                 ||  p.getCategoriaDePrenda().equals(Categoria.ACCESORIOS) )
+//                .count();
+//
+//    }
+//    
+    
+    
+    private boolean tieneTodasLasCategorias(List<Prenda> prendas) {
+    	
+        Map<Categoria, List<Prenda>> prendasPorCategoria = prendas.stream().collect(Collectors.groupingBy(Prenda::getCategoriaDePrenda));
 
+        return prendasPorCategoria.containsKey(Categoria.SUPERIOR)
+            && prendasPorCategoria.containsKey(Categoria.INFERIOR)
+            && prendasPorCategoria.containsKey(Categoria.CALZADO)
+            && prendasPorCategoria.containsKey(Categoria.ACCESORIOS);
     }
-
-    public boolean tieneTodasLasCategorias(){
-
-        if( this.cantidadCategorias() == 4 ) return true; else return  false;
-
-    }
-
-    public long cantidadCategorias(){
-
-        return  (long)prendas.stream()
-                .filter( p-> p.getTipoPrenda().getCategoria().equals(Categoria.INFERIOR)
-                ||  p.getTipoPrenda().getCategoria().equals(Categoria.SUPERIOR)
-                ||  p.getTipoPrenda().getCategoria().equals(Categoria.CALZADO)
-                 ||  p.getTipoPrenda().getCategoria().equals(Categoria.ACCESORIOS) )
-                .count();
-
-    }
+    
+    
 
 
 

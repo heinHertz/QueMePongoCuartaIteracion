@@ -18,10 +18,20 @@ public class testBorrador {
 		
 		borrador.especificarColorPrimariol(Color.AMARILLO);
 		
-		borrador.especificarMaterial(Material.POLIESTER);
+		borrador.especificarMaterial(Material.PLASTICO);
 
 		borrador.setColorSecundario(Color.AZUL);
 		
+		
+		
+		
+		
 	}
+	
+	
+	
+	
+	
+	
 
 }
