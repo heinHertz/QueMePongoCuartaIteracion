@@ -16,6 +16,9 @@ public class Prenda {
     Color colorSecundario;
     
     Trama trama = Trama.LISA;
+    
+  //  int temperatura;
+    
 
     public Prenda( TipoPrenda tipoPrenda, Material material, Color colorPrimario,Color colorSecundario, Trama trama){
 
@@ -33,6 +36,13 @@ public class Prenda {
 
     }
 
+    
+    public boolean esAdecuadaTemperaturaPrenda(int temperatura) {
+    	
+    	return this.tipoPrenda.getTemperaturaAdecuada() < temperatura   ;
+    	
+    }
+    
     
     
     public void setTipoPrenda(TipoPrenda tipoPrenda ) {    	    	
@@ -56,6 +66,10 @@ public class Prenda {
     }
 
    
+    
+    
+    
+    
 
     public Color getColorPrimario() {
         return this.colorPrimario;

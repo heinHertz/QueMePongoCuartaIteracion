@@ -38,7 +38,22 @@ public class Atuendo {
       }
     
     
+    public boolean esAtuendoAptoTemperatura(int temperatura) {
+    	
+    return	this.prendas.stream().allMatch( p -> p.esAdecuadaTemperaturaPrenda(temperatura) == true );
+    	
     
+    
+    }
+    
+    
+    
+    
+    
+    public boolean esAtuendoConTodasLasCategorias() {
+    	
+    	return tieneTodasLasCategorias( this.prendas );
+    }
 
     
     private boolean tieneTodasLasCategorias(List<Prenda> prendas) {

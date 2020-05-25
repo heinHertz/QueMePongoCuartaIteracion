@@ -44,7 +44,7 @@ public class ServicioClima implements InterfazServicioClima{
 	  
 	  
 	  
-	  private Clima buscarClimaFecha(Instant fecha) {
+	  public Clima buscarClimaFecha(Instant fecha) {
 
 	        Clima climaFecha = null;
 

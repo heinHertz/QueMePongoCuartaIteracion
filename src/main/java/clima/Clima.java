@@ -22,5 +22,21 @@ public class Clima {
         return fecha.isAfter(this.fecha) && ChronoUnit.HOURS.between(this.fecha, fecha) == 0;
     }
 	
+    
+    public int temperaturaDeClima() {
+    	
+    	return this.temperatura;
+        	
+    }
 
+	public void setTemperatura(int temperatura) {
+		this.temperatura = temperatura;
+	}
+
+	public void setFecha(Instant fecha) {
+		this.fecha = fecha;
+	}
+
+    
+    
 }
