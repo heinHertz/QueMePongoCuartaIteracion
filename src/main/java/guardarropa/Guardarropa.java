@@ -16,10 +16,10 @@ public class Guardarropa {
 	 List<Atuendo> atuendos = new ArrayList<Atuendo>();
 	
 	
-	
-public Stream<Atuendo> sugerenciasAptasTemperatura (   int temperatura   ) {
+public Stream<Atuendo> sugerenciasAptasTemperatura (List<Prenda> prendas ,   int temperatura   ) {
 		
-	//if(!tieneTodasLasCategorias( prendas))excepcion();
+	if(!tieneTodasLasCategorias( prendas))throw new ExcepcionGuardarropa("Debe tener todas las categorias");
+	
 		
 	return  atuendos.stream().filter( a -> a.esAtuendoAptoTemperatura(temperatura) == true  );		
 			 
@@ -27,6 +27,10 @@ public Stream<Atuendo> sugerenciasAptasTemperatura (   int temperatura   ) {
 	}
 	
 
+public void setPrendas(List<Atuendo> atuendos ){
+	
+	this.atuendos = atuendos;
+}
 
 	
 	

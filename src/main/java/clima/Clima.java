@@ -2,6 +2,7 @@ package clima;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.HashMap;
 
 public class Clima {
 	
@@ -10,8 +11,22 @@ public class Clima {
 	Instant fecha;
 	
 	
+	  HashMap<String, Object>  climas = new HashMap<String, Object>();
 	
 	
+	public Clima(   Object  object    ) {
+		
+		
+		this.climas = (HashMap<String, Object>) object;
+		
+		
+	}
+	
+	public int getTemperatura() {
+		
+		return (int) this.climas.get("Value");
+		
+	}
 	
 	
     public boolean esClimaFecha(Instant fecha) {

@@ -9,9 +9,5 @@ import clima.*;
 public interface ProveedorClima {
 		
 	List<Map<String, Object>> getWeather(String ciudad);
-	//
-///   getWeather    getClima
-	
-	//  List<Clima> getClima();
 	
 }
