@@ -19,12 +19,11 @@ public class testClima {
 		
 		List<Map<String, Object>> condicionesClimaticas = apiClima.getWeather( "Buenos Aires, Argentina" );  
 		
-		
-		
+				
 		Clima nuevoClima = new Clima (condicionesClimaticas.get(0).get("Temperature"));
 		
 		
-		assertEquals(	nuevoClima.getTemperatura() ,  57 ); //Devuelve un número del 0 al 1
+		assertEquals(	nuevoClima.getTemperatura() ,  57 ); 
 		
 		
 	}

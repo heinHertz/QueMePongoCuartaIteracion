@@ -78,7 +78,5 @@ public class ServicioClima implements InterfazServicioClima{
 	  
 	  
 	  
-	  
-	 // public Clima getClima(Instant fecha) {  return new Clima(); }
 	
 }

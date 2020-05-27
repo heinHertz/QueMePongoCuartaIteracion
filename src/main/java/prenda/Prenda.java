@@ -17,21 +17,20 @@ public class Prenda {
     
     Trama trama = Trama.LISA;
     
-  //  int temperatura;
     
-
+// la temperatura va en tipo prenda
+    
     public Prenda( TipoPrenda tipoPrenda, Material material, Color colorPrimario,Color colorSecundario, Trama trama){
 
-    	this.tipoPrenda = tipoPrenda;		 //Objects.requireNonNull(tipoPrenda, "tipo de prenda es obligatorio");
+    	this.tipoPrenda = tipoPrenda;		
     	
-    	this.material = material;			//Objects.requireNonNull(material, "material es obligatorio");
+    	this.material = material;			
     			  
-    	this.colorPrimario = colorPrimario; // Objects.requireNonNull(colorPrimario, "color es obligatorio");
+    	this.colorPrimario = colorPrimario;
     	
-    	this.colorSecundario = colorSecundario; //Objects.requireNonNull(colorSecundario, "color es obligatorio");
+    	this.colorSecundario = colorSecundario;
     	
-
-    	this.trama = trama; // Objects.requireNonNull(trama, "trama es obligatorio");
+    	this.trama = trama; 
         
 
     }
@@ -66,10 +65,6 @@ public class Prenda {
     }
 
    
-    
-    
-    
-    
 
     public Color getColorPrimario() {
         return this.colorPrimario;

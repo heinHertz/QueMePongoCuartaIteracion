@@ -10,4 +10,6 @@ public interface ProveedorClima {
 		
 	List<Map<String, Object>> getWeather(String ciudad);
 	
+
+	
 }
