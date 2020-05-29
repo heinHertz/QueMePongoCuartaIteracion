@@ -22,11 +22,11 @@ public class Prenda {
     
     public Prenda( TipoPrenda tipoPrenda, Material material, Color colorPrimario,Color colorSecundario, Trama trama){
 
-    	this.tipoPrenda = tipoPrenda;		
+    	this.tipoPrenda = tipoPrenda; Objects.requireNonNull(tipoPrenda, "tipoPrenda es obligatorio");		
     	
-    	this.material = material;			
+    	this.material = Objects.requireNonNull(material, "material es obligatorio");	
     			  
-    	this.colorPrimario = colorPrimario;
+    	this.colorPrimario = Objects.requireNonNull(colorPrimario, "colorPrimario es obligatorio");
     	
     	this.colorSecundario = colorSecundario;
     	
@@ -85,6 +85,11 @@ public class Prenda {
         return colorSecundario;
     }
 
+	
+	public boolean prendaPerteneceACategoria(Categoria categoria){
+		
+		return this.getCategoriaDePrenda().equals(categoria);
+	}
 
     // ESTO SIRVE SI AL COMPARAR DOS OBJETOS PRENDA , SON IGUALES SI TIENEN LAS MISMAS ATRIBUTOS CON LOS MISMOS VALORES
     @Override

@@ -22,6 +22,8 @@ public class Atuendo {
         this.prendas = prendas;
     }
     
+    public Atuendo() {};  
+    
 
     public void agregarPrenda( Prenda prendaNueva){
 
@@ -32,7 +34,7 @@ public class Atuendo {
     public List<Prenda> getPrendas() {   return prendas;    }
     
     
-    private boolean esPrendasValidas(List<Prenda> prendas) {
+    public boolean esPrendasValidas(List<Prenda> prendas) {
     	
         return prendas == null || prendas.isEmpty() || !tieneTodasLasCategorias(prendas);
       }
@@ -45,9 +47,6 @@ public class Atuendo {
     
     
     }
-    
-    
-    
     
     
     public boolean esAtuendoConTodasLasCategorias() {

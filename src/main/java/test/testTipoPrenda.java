@@ -1,7 +1,9 @@
 package test;
 
-import main.java.atuendo.Atuendo;
-import main.java.prenda.*;
+import atuendo.Atuendo;
+import prenda.*;
+import prenda.Prenda;
+
 import org.junit.Test;
 
 public class testTipoPrenda {
@@ -12,9 +14,9 @@ public class testTipoPrenda {
         // quiero especificar qué tipo de prenda estoy cargando (zapatos, camisa de mangas cortas, pantalón, etc).
         // tipo zapatos, zapatillas, chancletas
 
-        TipoPrenda remera = new TipoPrenda( "remera", Categoria.SUPERIOR );
+        TipoPrenda remera = new TipoPrenda( Categoria.SUPERIOR, 15 );
 
-        Prenda chomba = new Prenda( remera, Categoria.SUPERIOR, Material.POLIESTER, Color.FUCSIA,  null    );
+        Prenda chomba = new Prenda( remera,  Material.POLIESTER, Color.FUCSIA , Color.AMARILLO ,  Trama.CONLUNARES   );
 
 
     }
@@ -25,7 +27,8 @@ public class testTipoPrenda {
 
         TipoPrenda remera = new TipoPrenda( "remera", Categoria.SUPERIOR );
 
-        Prenda chomba = new Prenda( remera, Categoria.CALZADO, Material.POLIESTER, Color.FUCSIA,  null    );
+     
+        Prenda chomba = new Prenda( remera,  Material.POLIESTER, Color.FUCSIA , Color.AMARILLO ,  Trama.CONLUNARES   );
 
 
     }
